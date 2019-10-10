@@ -1,2 +1,2 @@
 # yliu_utilities
-code snippets for imaging analysis
+code snippets for image analysis
