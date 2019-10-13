@@ -1,5 +1,4 @@
 #modified based on recorded ImageJ Marco to perform color deconvolution on all images 
-#under one directory and save results to another directory
 
 run("Close All");
 
