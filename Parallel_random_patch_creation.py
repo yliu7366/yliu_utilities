@@ -1,5 +1,4 @@
 #extract patches from original images using multiprocessing (16 process)
-#300 random patches per each image
 #find . -name "*.png" -size -220k -delete
 
 from __future__ import print_function
