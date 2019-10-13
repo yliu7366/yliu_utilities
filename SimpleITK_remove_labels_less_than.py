@@ -1,4 +1,5 @@
-#Using SimpleITK to remove labels less than 4x4=16 pixels in size and save out the filtered labels as binary image.
+#Use SimpleITK to remove labels less than 4x4=16 pixels in size
+#Save out the filtered labels as binary image.
 
 import SimpleITK as sitk
 
