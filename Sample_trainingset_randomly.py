@@ -30,3 +30,5 @@ print('sampling 200 patches...')
 for index in picked:
     basename = os.path.basename(files[index])
     shutil.move(files[index], os.path.join(trainPath, basename))
+    
+print('done.')
