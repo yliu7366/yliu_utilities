@@ -1,3 +1,5 @@
+#script to parse Summit output files for job statistics
+
 import os, shutil
 import natsort
 
