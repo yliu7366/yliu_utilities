@@ -122,7 +122,7 @@ def get_unet(lrate=1e-5):
 
     model = Model(inputs=[inputs], outputs=[conv10])
 
-    model.complie(optimizer=Adam(lr=lrate),
+    model.compile(optimizer=Adam(lr=lrate),
                            loss=combined_entropy_jaccard_loss,
                            metrics=[jaccard_index])
 
