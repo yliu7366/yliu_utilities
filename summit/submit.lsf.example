@@ -1,0 +1,14 @@
+#example lsf file for submitting a DDL job
+
+#!/bin/bash
+
+#BSUB -P PROJ
+#BSUB -W 2:00
+#BSUB -nnodes 16
+#BSUB -J JOBNAME
+#BSUB -o %J.out
+#BSUB -e %J.out
+
+module load ibm-wml-ce
+
+ddlrun python job.py
