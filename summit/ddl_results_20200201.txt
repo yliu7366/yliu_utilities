@@ -1,0 +1,82 @@
+Summit DDL test results 20200201_ddl
+
+Num. of Nodes	 Job ID	 Results
+	1	 862615	 Success
+	1	 862616	 Success
+	1	 862617	 Success
+	1	 862618	 Success
+	1	 862619	 Success
+	1	 862620	 Failure
+	1	 862621	 Success
+	1	 862622	 Success
+	1	 862623	 Success
+	1	 862624	 Failure
+	2	 862625	 Failure
+	2	 862626	 Failure
+	2	 862627	 Success
+	2	 862628	 Success
+	2	 862629	 Failure
+	2	 862630	 Success
+	2	 862631	 Success
+	2	 862632	 Success
+	2	 862633	 Success
+	2	 862634	 Success
+	3	 862635	 Success
+	3	 862636	 Success
+	3	 862637	 Success
+	3	 862638	 Failure
+	3	 862639	 Failure
+	3	 862640	 Success
+	3	 862641	 Failure
+	3	 862642	 Failure
+	3	 862643	 Success
+	3	 862644	 Success
+	4	 862645	 Failure
+	4	 862646	 Failure
+	4	 862647	 Failure
+	4	 862648	 Failure
+	4	 862649	 Success
+	4	 862650	 Failure
+	4	 862651	 Success
+	4	 862652	 Success
+	4	 862653	 Success
+	4	 862654	 Failure
+	16	 862655	 Failure
+	16	 862656	 Failure
+	16	 862657	 Failure
+	16	 862658	 Failure
+	16	 862659	 Failure
+	16	 862660	 Failure
+	16	 862661	 Failure
+	16	 862662	 Failure
+	16	 862663	 Failure
+	16	 862664	 Failure
+
+Total jobs: 50 Success: 25 Failure: 25 
+
+Num. of Nodes	 Job ID	 Segment fault on nodes
+	1	 862620	 ['h33n15']
+	1	 862624	 ['f12n08']
+	2	 862625	 ['f12n10']
+	2	 862626	 ['f12n12']
+	2	 862629	 ['f12n18']
+	3	 862638	 ['f15n01', 'f14n18']
+	3	 862639	 ['f15n03']
+	3	 862641	 ['f15n09']
+	3	 862642	 ['f15n12']
+	4	 862645	 ['f13n10']
+	4	 862646	 ['f13n15']
+	4	 862647	 ['f14n01']
+	4	 862648	 ['f16n01']
+	4	 862650	 ['f16n10']
+	4	 862654	 ['f17n07', 'f17n08']
+	16	 862655	 ['f21n18', 'f18n01', 'f22n04', 'f17n09', 'f17n15', 'f17n14', 'f17n17', 'f17n11', 'f17n18']
+	16	 862656	 ['f22n09', 'f22n16', 'f22n06', 'f22n13', 'f22n08', 'f22n17', 'f23n01', 'f22n05', 'f22n07', 'f22n15', 'f22n11']
+	16	 862657	 ['g25n18', 'g26n08', 'g26n01', 'g26n07', 'g26n10', 'g26n12']
+	16	 862658	 ['g30n01', 'g29n10', 'g29n13', 'g29n09', 'g29n17', 'g30n02', 'g29n15', 'g30n09', 'g29n08', 'g29n18']
+	16	 862659	 ['g31n17', 'g30n13', 'g30n14', 'g32n05', 'g32n01', 'g30n15', 'g32n04']
+	16	 862660	 ['g32n10', 'g33n03', 'g32n18', 'g33n06', 'g33n05', 'g32n11', 'g32n12', 'g32n14', 'g33n04', 'g33n07']
+	16	 862661	 ['g33n14', 'g34n04', 'g34n03', 'g33n13', 'g34n06', 'g33n17', 'g34n01']
+	16	 862662	 ['g35n04', 'g35n01', 'g35n02', 'g34n17', 'g34n14', 'g34n18', 'g34n08', 'g34n11', 'g34n12', 'g34n07']
+	16	 862663	 ['g35n16', 'g35n15', 'g35n17', 'g35n05', 'g35n07', 'g35n10']
+	16	 862664	 ['g36n14', 'g36n03', 'g36n16', 'g36n15', 'h12n05', 'g36n06', 'g36n09', 'g36n05']
