@@ -36,7 +36,7 @@ img_cols = 512
 
 NUM_CLASSES = 4
 
-NUM_BATCHSIZE = 8
+NUM_BATCHSIZE = 16
 NUM_LRATE = 1e-4*hvd.size()
 
 NUM_MAX_EPOCHS = 50
@@ -48,11 +48,10 @@ ROOT = 'dataroot'
 def load_train_data():
     imgs_train = np.load(os.path.join(ROOT, 'img_20191216_aug.npy_' +str(hvd.rank()) + '.npy'))
     imgs_mask_train = np.load(os.path.join(ROOT, 'labelOnehot_20191216_aug_binary.npy_' +str(hvd.rank()) + '.npy'))
-
     return imgs_train, imgs_mask_train
 
 def combined_entropy_jaccard_loss(y_true, y_pred):
-    return categorical_crossentropy(y_true, y_pred) + jaccard_loss(y_true, y_pred)
+    return K.cast(categorical_crossentropy(y_true, y_pred) + jaccard_loss(y_true, y_pred), 'float32')
 
 def categorical_crossentropy(y_true, y_pred):
     return tensorflow.clip_by_value(K.mean(K.categorical_crossentropy(y_true, y_pred)), -1.0e6, 1.0e6)
@@ -78,8 +77,8 @@ def jaccard_index(y_true, y_pred, smooth=1):
 
         union = K.sum(K.abs(sparse_y_true_flat_class)) + K.sum(K.abs(sparse_y_pred_flat_class)) - intersection
 
-        sum_jaccard_index += ((intersection+smooth)/(union+smooth))/float(NUM_CLASSES)
-    return sum_jaccard_index
+        sum_jaccard_index += ((intersection+smooth)/(union+smooth))/K.cast(NUM_CLASSES, 'float32')
+    return K.cast(sum_jaccard_index, 'float32')
 
 def get_unet(lrate=1e-5):
     
@@ -123,20 +122,19 @@ def get_unet(lrate=1e-5):
     conv10 = Conv2D(NUM_CLASSES, (1, 1), activation='softmax')(conv9)
 
     model = Model(inputs=[inputs], outputs=[conv10])
-
+    
     model.compile(optimizer=hvd.DistributedOptimizer(Adam(lr=lrate)),
                 loss=combined_entropy_jaccard_loss,
                 metrics=[jaccard_index])
 
-    return model
+    return model   
  
 def train_and_predict(postfix, bsize, eps, lrate, imgs_train, imgs_mask_train, weights=None):
     
     if hvd.rank() == 0:
         print('Running with postfix:', postfix, 'batch_size:', bsize, 'epochs:', eps,
           'lr:', lrate, 'weights:', weights)
-        
-
+    
     tempH5file = postfix + '_' + str(random.randint(1,1000000)) + '.h5'
     
     model = get_unet(lrate)
@@ -154,7 +152,8 @@ def train_and_predict(postfix, bsize, eps, lrate, imgs_train, imgs_mask_train, w
                             verbose=1, 
                             shuffle=True,
                             validation_split = 0.1,
-                            callbacks=[hvd.callbacks.BroadcastGlobalVariablesCallback(0), 
+                            callbacks=[hvd.callbacks.BroadcastGlobalVariablesCallback(0),
+                                        hvd.callbacks.MetricAverageCallback(), 
                                         model_checkpoint, 
                                         reduce_lr, 
                                         early_stopping_monitor])
@@ -165,6 +164,7 @@ def train_and_predict(postfix, bsize, eps, lrate, imgs_train, imgs_mask_train, w
                             shuffle=True,
                             validation_split = 0.1,
                             callbacks=[hvd.callbacks.BroadcastGlobalVariablesCallback(0),
+                                        hvd.callbacks.MetricAverageCallback(),
                                         reduce_lr, 
                                         early_stopping_monitor])
    
@@ -182,15 +182,15 @@ def train_and_predict(postfix, bsize, eps, lrate, imgs_train, imgs_mask_train, w
 
 def runBatch(bm, key):
 
-    print('loading data...')
+    if hvd.rank() == 0:
+        print('loading data...')
 
     imgs_train, imgs_mask_train = load_train_data()
 
-#    imgs_mask_train = to_categorical(imgs_mask_train, NUM_CLASSES)
     imgs_train = imgs_train.astype(np.float32) / 255.
-#    imgs_mask_train = imgs_mask_train[..., np.newaxis]
     
-    print('data loading complete')
+    if hvd.rank() == 0:
+        print('data loading complete', imgs_train.dtype, imgs_mask_train.dtype)
 
     scores = np.zeros(bm, dtype=np.float32)
     postfix = key
@@ -198,9 +198,10 @@ def runBatch(bm, key):
     epochs = NUM_MAX_EPOCHS
     lrate = NUM_LRATE
     for i in range(bm):
-        print('\nBatch:', i)
+        if hvd.rank() == 0:
+            print('\nBatch:', i)
         train_and_predict(postfix, batchSize, epochs, lrate, imgs_train, imgs_mask_train)
     
-runBatch(1, 'postfix')
+runBatch(1, 'CD20CD3_onehot_unet_20191216_2')
 
 print("done.")
