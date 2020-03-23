@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#BSUB -P PROJID
+#BSUB -W 2:00
+#BSUB -nnodes 16
+#BSUB -q batch
+#BSUB -J CD4
+#BSUB -o %J.out
+#BSUB -e %J.out
+#BSUB -alloc_flags "nvme smt4"
+
+module load ibm-wml-ce
+
+NODES=$(cat ${LSB_DJOB_HOSTFILE} | sort | uniq | grep -v login | grep -v batch | wc -l)
+GPU_COUNT=$((NODES*6))
+
+jsrun -n$NODES -a1 -c42 -r1 bash data.sh
+
+ddlrun python cd4.py ${LSB_JOBID}
