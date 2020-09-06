@@ -42,11 +42,11 @@ class ClassificationDataGenerator(Sequence):
   def __augment__(self, img):
   
     imgHSV = np.array(img.convert('HSV'), dtype=np.int16)
-    imgHSV[:,:] += np.array([randint(-45, 45), 0, 0]).astype(np.int16)
-    imgHSV[imgHSV < 0] += 256
-    imgHSV[imgHSV > 255] -= 256
+    imgHSV[:,:] += np.array([randint(-25, 25), 0, 0]).astype(np.int16)
+    imgHSV[imgHSV[:,:,0] < 0] += np.array([256, 0, 0]).astype(np.int16)
+    imgHSV[imgHSV[:,:,0] > 255] -= np.array([256, 0, 0]).astype(np.int16)
 
-    newImg = Image.fromarray(imgHSV.astype(np.uint8))
+    newImg = Image.fromarray(imgHSV.astype(np.uint8), 'HSV')
     newImg = newImg.convert('RGB')
         
     t = random.randint(0, 10)
