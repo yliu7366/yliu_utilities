@@ -31,7 +31,7 @@ class ClassificationDataGenerator(Sequence):
       for c in sorted(dataset):
         inputs.append(dataset[c][i])
       for c in range(len(dataset)):
-        targets.append(one_hot(c, len(classes))))
+        targets.append(one_hot(c, len(classes)))
         
     return inputs, targets
     
@@ -43,7 +43,7 @@ class ClassificationDataGenerator(Sequence):
     imgHSV = np.array(img.convert('HSV'), dtype=np.int16)
     imgHSV[:,:] += np.array([randint(-45, 45), 0, 0]).astype(np.int16)
     imgHSV[imgHSV < 0] += 256
-    imgHSV[imgHSV > 255 -= 256]
+    imgHSV[imgHSV > 255] -= 256
 
     newImg = Image.fromarray(imgHSV.astype(np.uint8))
     newImg = newImg.convert('RGB')
