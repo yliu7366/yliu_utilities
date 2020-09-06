@@ -27,7 +27,7 @@ class ClassificationDataGenerator(Sequence):
     inputs = []
     targets = []
     
-    for i in range(maxx * len(classes)):
+    for i in range(maxx):
       for c in sorted(dataset):
         inputs.append(dataset[c][i])
       for c in range(len(dataset)):
