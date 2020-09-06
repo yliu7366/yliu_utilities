@@ -32,7 +32,8 @@ class ClassificationDataGenerator(Sequence):
         inputs.append(dataset[c][i])
       for c in range(len(dataset)):
         targets.append(one_hot(c, len(classes)))
-        
+    
+    print('Num. of classes', len(classes), 'samples', maxx*len(classes))
     return inputs, targets
     
   def __len__(self):
