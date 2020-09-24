@@ -49,7 +49,17 @@ class ClassificationDataGenerator(Sequence):
     newImg = Image.fromarray(imgHSV.astype(np.uint8), 'HSV')
     newImg = newImg.convert('RGB')
         
-    t = random.randint(0, 10)
+    #brightness augmentation
+    enhancer = ImageEnhance.Brightness(newImg)
+    e = random.randint(50, 150) * 0.01
+    newImg = enhancer.enhance(e)
+
+    #contrast augmentation
+    enhancer = ImageEnhance.Contrast(newImg)
+    e = random.randint(50, 150) * 0.01
+    newImg = enhancer.enhance(e)
+
+    t = random.randint(0, 6)
     if t == 0:
       return newImg.transpose(PIL.Image.FLIP_LEFT_RIGHT)
     elif t == 1:
@@ -62,18 +72,6 @@ class ClassificationDataGenerator(Sequence):
       return newImg.transpose(PIL.Image.ROTATE_270)
     elif t == 5:
       return newImg.transpose(PIL.Image.TRANSPOSE)
-    elif t == 6:
-      enhancer = ImageEnhance.Brightness(newImg)
-      return enhancer.enhance(1.5)
-    elif t == 7:
-      enhancer = ImageEnhance.Brightness(newImg)
-      return enhancer.enhance(0.5)
-    elif t == 8:
-      enhancer = ImageEnhance.Contrast(newImg)
-      return enhancer.enhance(1.5)
-    elif t == 9:
-      enhancer = ImageEnhance.Contrast(newImg)
-      return enhancer.enhance(0.5)
       
     return newImg
 
