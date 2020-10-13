@@ -3,7 +3,7 @@ class ClassificationDataGenerator(Sequence):
     self.inPath = inPath
     self.batchSize = batchSize
     self.aug = aug
-    self.inputs, self.targets = self.__loadData()
+    self.inputs, self.targets = self.__loadData__()
   
   def __loadData__(self):
     classes = glob.glob(os.path.join(self.inPath, '*'))
