@@ -10,7 +10,7 @@ def overlappingSize(img_size, padding, pch_size, pch_overlapping):
   
   for i, p, ps, po in zip(img_size, padding, pch_size, pch_overlapping):
     wndSize = ps - po*2
-    newSize.append( ((i+p) // wndSize) * wndSize + i )
+    newSize.append( ((i+p) // wndSize) * wndSize + ps )
     
   return newSize
 #end def overlappingSize
