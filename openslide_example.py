@@ -14,3 +14,5 @@ for w in INPUTS:
 roi = wsiNpy[0:256, 0:256]
 #take out a 256x256 patch from (256, 0)
 roi = wsiNpy[0:256, 256:512]
+#take out a 256x256 patch from (x, y)
+roi = wsiNpy[y:y+256, x:x+256]
