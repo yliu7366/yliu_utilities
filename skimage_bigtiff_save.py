@@ -1,4 +1,4 @@
-#can not fine an existing example of setting the correct parameters
+#can not find an existing example of setting the correct parameters
 #for skimage.imsave saving bigtiff files. So here it goes:
 
 kwargs = {'bigtiff': True}
