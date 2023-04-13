@@ -66,6 +66,7 @@ def TrainingDataGen(i):
   img = Image.open(os.path.join(ROOT, 'img', nameTrn[i]))
   msk = Image.open(os.path.join(ROOT, 'msk', nameTrn[i]))
 
+  # img = ImageAugment(img, msk) will cause TyperError: cannot unpack non-iterable NoneType object
   img = ImageAugment(img)
   
   # convert PIL image to numpy array
