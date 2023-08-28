@@ -9,6 +9,7 @@
   * [Python environment for doing vision tasks with TensorFlow](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#python-environment-for-doing-vision-tasks-using-tensorflow)
   * [Job submission on Biowulf](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#job-submission-on-biowulf)
   * [Interactive GPU jobs on Biowulf](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/biowulf#interactive-jobs-on-biowulf)
+  * [tmux]
   * [Simple MNIST convnet example](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#keras-simple-mnist-convent-example)
 
 ## Custom Python Environment
@@ -290,5 +291,15 @@ $ mamba activate tensorflow_vision
 $ python your_deep_learning_magic_code.py
 ```
 
+### tmux
+Some quick references on tmux usage.
+```bash
+$ tmux # start a tmux session
+$ tmux ls # list existing tmux sessions
+$ tmux attach -t 0 # attach to tmux session 0
+$ Ctrl+b d # detach from the current tmux session
+$ Ctrl+b x # kill the current tmux session
+```
+ 
 ### Keras simple MNIST convent example
 A quick example for running convent models using TensorFlow/Keras can be found [here](https://keras.io/examples/vision/mnist_convnet/) once you have finished deep learning setup on Biowulf.
