@@ -7,6 +7,7 @@
 [Examples](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#examples)  
   * [Python environment for doing vision tasks with TensorFlow](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#python-environment-for-doing-vision-tasks-using-tensorflow)
   * [Job submission on Biowulf](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#job-submission-on-biowulf)
+  * [Simple MNIST convnet]
 
 ## Custom Python Environment
 Biowulf has many modules already installed but not all dependencies are included in the stock Biowulf modules. For example, openslide and tensorflow are two different modules on Biowulf. Custom python environments provides greater flexibility to manage dependencies. Follow this tutorial to create custom python environments on Biowulf [Conda on Biowulf](https://hpc.nih.gov/docs/diy_installation/conda.html).
@@ -257,3 +258,6 @@ mamba activate tensorflow_vision
 python your_deep_learning_magic_code.py $SLURM_JOB_ID
 ```
 If the script is named *job.sh*, use the following command to submit a job: *sbatch job.sh*
+
+### Keras simple MNIST convent example
+A quick example for running convent models using TensorFlow/Keras can be found [here](https://keras.io/examples/vision/mnist_convnet/) once you have finished deep learning setup on Biowulf.
