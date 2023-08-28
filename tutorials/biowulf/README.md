@@ -303,6 +303,7 @@ When inside a tmux session.
 ```bash
 $ Ctrl+b d # detach from the current tmux session
 $ Ctrl+b x # kill the current tmux session
+$ Ctrl+b [ # enable scrolling of command line history inside the tmux session. Esc to stop scrolling.
 ```
  
 ### Keras simple MNIST convent example
