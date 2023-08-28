@@ -5,7 +5,7 @@
 ## Results
 Raw image|SAM|SAM-HQ
 ---|---|---
-![](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg|width=25%)
+![](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg)
 ## SAM
 [SAM Github repository](https://github.com/facebookresearch/segment-anything)  
 
