@@ -13,6 +13,18 @@ Biowulf has many modules already installed but not all dependencies are included
 The original TensorFlow installation instructions doesn't work well on Biowulf. Either conda install or pip install will have the libdevice not found at ./libdevice.10.bc error.
 The updated TensorFlow installation instructions included fixes for NVCC, XLA, and libdevice file location issues. Applying the steps listed in the *Ubuntu 22.04* section will fix the problem. [Install Tensorflow](https://www.tensorflow.org/install/pip).
 
+```
+# Install NVCC
+conda install -c nvidia cuda-nvcc=11.3.58
+# Configure the XLA cuda directory
+mkdir -p $CONDA_PREFIX/etc/conda/activate.d
+printf 'export XLA_FLAGS=--xla_gpu_cuda_data_dir=$CONDA_PREFIX/lib/\n' >> $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+source $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+# Copy libdevice file to the required path
+mkdir -p $CONDA_PREFIX/lib/nvvm/libdevice
+cp $CONDA_PREFIX/lib/libdevice.10.bc $CONDA_PREFIX/lib/nvvm/libdevice/
+```
+
 ## PyTorch
 The official PyTorch installation instructions work well on Biowulf. [Install PyTorch](https://pytorch.org/get-started/locally/).
 
