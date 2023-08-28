@@ -9,7 +9,7 @@
   * [Python environment for doing vision tasks with TensorFlow](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#python-environment-for-doing-vision-tasks-using-tensorflow)
   * [Job submission on Biowulf](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#job-submission-on-biowulf)
   * [Interactive GPU jobs on Biowulf](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/biowulf#interactive-jobs-on-biowulf)
-  * [tmux]
+  * [tmux](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/biowulf#tmux)
   * [Simple MNIST convnet example](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#keras-simple-mnist-convent-example)
 
 ## Custom Python Environment
@@ -297,6 +297,9 @@ Some quick references on tmux usage.
 $ tmux # start a tmux session
 $ tmux ls # list existing tmux sessions
 $ tmux attach -t 0 # attach to tmux session 0
+```
+When inside a tmux session.
+```bash
 $ Ctrl+b d # detach from the current tmux session
 $ Ctrl+b x # kill the current tmux session
 ```
