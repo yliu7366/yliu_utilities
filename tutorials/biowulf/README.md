@@ -297,6 +297,7 @@ Some quick references on tmux usage.
 $ tmux # start a tmux session
 $ tmux ls # list existing tmux sessions
 $ tmux attach -t 0 # attach to tmux session 0
+$ tmux attach -t 1 # attach to tmux session 1
 ```
 When inside a tmux session.
 ```bash
