@@ -12,5 +12,6 @@ Biowulf has many modules already installed but not all dependencies are included
 ## Tensorflow
 
 ## PyTorch
+The official PyTorch installation instructions work well on Biowulf. [Install PyTorch](https://pytorch.org/get-started/locally/)
 
 ## Example
