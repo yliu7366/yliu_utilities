@@ -10,7 +10,7 @@
   * [Simple MNIST convnet example](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#keras-simple-mnist-convent-example)
 
 ## Custom Python Environment
-Biowulf has many modules already installed but not all dependencies are included in the stock Biowulf modules. For example, openslide and tensorflow are two different modules on Biowulf. Custom python environments provides greater flexibility to manage dependencies. Follow this tutorial to create custom python environments on Biowulf [Conda on Biowulf](https://hpc.nih.gov/docs/diy_installation/conda.html).
+Biowulf has many modules already installed but not all dependencies are included in the stock Biowulf modules. For example, openslide and tensorflow are two different modules on Biowulf. Custom python environments provides greater flexibility to manage dependencies. Follow this tutorial to create custom python environments on Biowulf [Conda on Biowulf](https://hpc.nih.gov/docs/diy_installation/conda.html). Biowulf recommends to save conda initalization code into a separate coda init file instead of adding automatic conda initialization into startup files. After conda setup following Biowulf instructions, you will have a conda init file saved in your own Biowulf folder. The conda init file should be sourced in job submission scripts in order to use custom python environment on Biowulf.
 
 ## TensorFlow
 The original TensorFlow installation instructions doesn't work well on Biowulf. Either conda install or pip install will have the *libdevice not found at ./libdevice.10.bc* error.
@@ -258,6 +258,7 @@ mamba activate tensorflow_vision
 python your_deep_learning_magic_code.py $SLURM_JOB_ID
 ```
 If the script is named *job.sh*, use the following command to submit a job: *sbatch job.sh*
+The *your_conda_initialization_script* is the conda init file created in the [Custom Python Environment](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/biowulf#custom-python-environment) section.
 
 ### Keras simple MNIST convent example
 A quick example for running convent models using TensorFlow/Keras can be found [here](https://keras.io/examples/vision/mnist_convnet/) once you have finished deep learning setup on Biowulf.
