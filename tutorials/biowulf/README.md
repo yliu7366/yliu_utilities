@@ -258,6 +258,7 @@ mamba activate tensorflow_vision
 python your_deep_learning_magic_code.py $SLURM_JOB_ID
 ```
 If the script is named *job.sh*, use the following command to submit a job: *sbatch job.sh*.  
+
 The *your_conda_initialization_script* is the conda init file created in the [Custom Python Environment](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/biowulf#custom-python-environment) section.
 
 ### Keras simple MNIST convent example
