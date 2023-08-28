@@ -8,7 +8,7 @@
 [Examples](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#examples)  
   * [Python environment for doing vision tasks with TensorFlow](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#python-environment-for-doing-vision-tasks-using-tensorflow)
   * [Job submission on Biowulf](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#job-submission-on-biowulf)
-  * [Interactive GPU jobs on Biowulf]
+  * [Interactive GPU jobs on Biowulf](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/biowulf#interactive-jobs-on-biowulf)
   * [Simple MNIST convnet example](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#keras-simple-mnist-convent-example)
 
 ## Custom Python Environment
