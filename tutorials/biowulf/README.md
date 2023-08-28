@@ -254,6 +254,6 @@ Example script to request a GPU, setup custom python virtual environment, and ex
 source your_conda_initalization_script
 mamba activate tensorflow_vision
 
-python code.py $SLURM_JOB_ID
+python your_deep_learning_magic_code.py $SLURM_JOB_ID
 ```
 If the script is named *job.sh*, use the following command to submit a job: *sbatch job.sh*
