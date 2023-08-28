@@ -1,10 +1,10 @@
 # Deep Learning on Biowulf
 
 ## Table of Contents
-[Python Enviroment](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#Custom)  
+[Python Enviroment](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf#Custom)  
 [Tensorflow](https://github.com/yliu7366/yliu_utilities/edit/master/tutorials/biowulf/README.md#TensorFlow)  
 [PyTorch](https://github.com/yliu7366/yliu_utilities/edit/master/tutorials/biowulf/README.md#PyTorch)  
-[Example](https://github.com/yliu7366/yliu_utilities/edit/master/tutorials/biowulf/README.md#Examples)  
+[Example](https://github.com/yliu7366/yliu_utilities/edit/master/tutorials/biowulf#Examples)  
   * [Python Environment for doing vision tasks with TensorFlow](https://github.com/yliu7366/yliu_utilities/edit/master/tutorials/biowulf/README.md#Python)
 
 ## Custom Python Environment
