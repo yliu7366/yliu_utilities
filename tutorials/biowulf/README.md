@@ -34,8 +34,10 @@ cp $CONDA_PREFIX/lib/libdevice.10.bc $CONDA_PREFIX/lib/nvvm/libdevice/
 The official PyTorch installation instruction works well on Biowulf. [Install PyTorch](https://pytorch.org/get-started/locally/).
 
 ## GPU resource
+Use the *freen* utility to check available GPU resource on Biowulf.
+
 ```bash
-freen | grep gpu
+$ freen | grep gpu
 gpu (k80)       0 / 41        0 / 1946                 28    56         247g   800g cpu56,core28,g256,ssd800,x2680,ibfdr,gpuk80
 gpu (v100)      0 / 1         0 / 28                   28    56         121g   800g cpu56,core28,g128,ssd800,x2680,ibfdr,gpuv100
 gpu (v100x)     7 / 54     3070 / 3888    84 / 216     36    72     4   373g  1600g cpu72,core36,g384,ssd1600,x6140,ibhdr,gpuv100x
