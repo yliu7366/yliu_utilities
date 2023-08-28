@@ -1,15 +1,15 @@
-Deep Learning at Biowulf
+# Deep Learning at Biowulf
 
-# Table of Contents
-Python Enviroment
-Tensorflow
-PyTorch
-Example
+## Table of Contents
+Python Enviroment  
+Tensorflow  
+PyTorch  
+Example  
 
-# Python Environment
+## Python Environment
 
-# Tensorflow
+## Tensorflow
 
-# PyTorch
+## PyTorch
 
-# Example
+## Example
