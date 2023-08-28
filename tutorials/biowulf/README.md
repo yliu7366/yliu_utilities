@@ -4,6 +4,7 @@
 [Custom Python Enviroment](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#custom-python-environment)  
 [Tensorflow](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#tensorflow)  
 [PyTorch](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#pytorch)  
+[GPU resource]
 [Examples](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#examples)  
   * [Python environment for doing vision tasks with TensorFlow](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#python-environment-for-doing-vision-tasks-using-tensorflow)
   * [Job submission on Biowulf](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#job-submission-on-biowulf)
@@ -31,6 +32,17 @@ cp $CONDA_PREFIX/lib/libdevice.10.bc $CONDA_PREFIX/lib/nvvm/libdevice/
 
 ## PyTorch
 The official PyTorch installation instruction works well on Biowulf. [Install PyTorch](https://pytorch.org/get-started/locally/).
+
+## GPU resource
+```bash
+freen | grep gpu
+gpu (k80)       0 / 41        0 / 1946                 28    56         247g   800g cpu56,core28,g256,ssd800,x2680,ibfdr,gpuk80
+gpu (v100)      0 / 1         0 / 28                   28    56         121g   800g cpu56,core28,g128,ssd800,x2680,ibfdr,gpuv100
+gpu (v100x)     7 / 54     3070 / 3888    84 / 216     36    72     4   373g  1600g cpu72,core36,g384,ssd1600,x6140,ibhdr,gpuv100x
+gpu (a100)      0 / 34     1414 / 2176    24 / 136     32    64     4   247g  3200g cpu64,core32,g256,ssd3200,e7543p,ibhdr200,gpua100
+gpu (p100)     19 / 46     1346 / 2576    83 / 184     28    56     4   121g   650g cpu56,core28,g128,ssd650,x2680,ibfdr,gpup100
+gpu (k80)      17 / 19     1006 / 1064    68 / 76      28    56     4   247g   400g cpu56,core28,g256,ssd400,x2695,ibfdr,gpuk80
+```
 
 ## Examples
 
