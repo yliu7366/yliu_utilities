@@ -259,7 +259,9 @@ python your_deep_learning_magic_code.py $SLURM_JOB_ID
 ```
 If the script is named *job.sh*, use the following command to submit a job: *sbatch job.sh*.  
 
-The *your_conda_initialization_script* is the conda init file created in the [Custom Python Environment](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/biowulf#custom-python-environment) section.
+The *your_conda_initialization_script* is the conda init file created in the [Custom Python Environment](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/biowulf#custom-python-environment) section.  
+
+The *$SLURM_JOB_ID* is a slurm environment parameter and my code use it as an identifier to save trained models. It is optional and your code may not want to use it at all.  
 
 ### Keras simple MNIST convent example
 A quick example for running convent models using TensorFlow/Keras can be found [here](https://keras.io/examples/vision/mnist_convnet/) once you have finished deep learning setup on Biowulf.
