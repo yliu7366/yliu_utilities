@@ -10,10 +10,11 @@
 Biowulf has many modules already installed but not all dependencies are included in the stock Biowulf modules. For example, openslide and tensorflow are two different modules on Biowulf. Custom python environments provides greater flexibility to manage dependencies. Follow this tutorial to create custom python environments on Biowulf [Conda on Biowulf](https://hpc.nih.gov/docs/diy_installation/conda.html).
 
 ## Tensorflow
-The original TensorFlow installation instructions doesn't work well on Biowulf. Either conda install or pip install will have the libdevice not found at ./libdevice.10.bc error.
+The original TensorFlow installation instructions doesn't work well on Biowulf. Either conda install or pip install will have the *libdevice not found at ./libdevice.10.bc* error.
 The updated TensorFlow installation instructions included fixes for NVCC, XLA, and libdevice file location issues. Applying the steps listed in the *Ubuntu 22.04* section will fix the problem. [Install Tensorflow](https://www.tensorflow.org/install/pip).
 
-```
+Steps to fix the libdevice issue. Copied from [Tensorflow documentation](https://www.tensorflow.org/install/pip).
+```shell
 # Install NVCC
 conda install -c nvidia cuda-nvcc=11.3.58
 # Configure the XLA cuda directory
