@@ -15,7 +15,7 @@ Biowulf has many modules already installed but not all dependencies are included
 
 ## TensorFlow
 The original TensorFlow installation instruction doesn't work well on Biowulf. Either conda install or pip install will have the *libdevice not found at ./libdevice.10.bc* error.
-The updated TensorFlow installation instruction includes fixes for NVCC, XLA, and libdevice file location issues. Applying the steps listed in the *Ubuntu 22.04* section will fix the problem. [Install Tensorflow](https://www.tensorflow.org/install/pip).
+The updated TensorFlow installation instruction includes fixes for NVCC, XLA, and libdevice file location issues. Applying the steps listed in the *Ubuntu 22.04* section in TensorFlow documentation will fix the problem. [Install Tensorflow](https://www.tensorflow.org/install/pip).
 
 Steps to fix the libdevice issue. Copied from the [Tensorflow documentation](https://www.tensorflow.org/install/pip).
 ```shell
