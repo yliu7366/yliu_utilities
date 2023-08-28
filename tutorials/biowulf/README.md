@@ -239,3 +239,20 @@ dependencies:
       - wrapt==1.15.0
       - zipp==3.16.2
 ```
+### Job submission on Biowulf
+Example script to request a GPU, setup custom python virtual environment, and execute python code.
+```bash
+#! /bin/bash
+
+#SBATCH --mem=32g
+#SBATCH --cpus-per-task=16
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:p100:1
+#SBATCH --time=24:00:00
+
+source your_conda_initalization_script
+mamba activate tensorflow_vision
+
+python code.py $SLURM_JOB_ID
+```
+If the script is named *job.sh*, use the following command to submit a job: *sbatch job.sh*
