@@ -45,6 +45,7 @@ gpu (a100)      0 / 34     1414 / 2176    24 / 136     32    64     4   247g  32
 gpu (p100)     19 / 46     1346 / 2576    83 / 184     28    56     4   121g   650g cpu56,core28,g128,ssd650,x2680,ibfdr,gpup100
 gpu (k80)      17 / 19     1006 / 1064    68 / 76      28    56     4   247g   400g cpu56,core28,g256,ssd400,x2695,ibfdr,gpuk80
 ```
+The table above shows that 7 *v100x* nodes and 84 individual *v100x* GPUs are available, for example.
 
 ## Examples
 
