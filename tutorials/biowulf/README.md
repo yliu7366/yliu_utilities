@@ -285,7 +285,8 @@ Sometime it is more convenient to have an interactive session for testing and/or
 Example commands to use tmux and launch an interactive session with GPU for deep learning tasks:
 ```bash
 $ tmux
-# start an interactive session with 8 cores, 120GB system memory, 1 P100 GPU, with walltime limit 24 hours
+# start an interactive session with 8 cores, 120GB system memory,
+# 1 P100 GPU, and walltime limit of 24 hours
 $ sinteractive -c8 --mem=120g --gres=gpu:p100:1 --time=24:00:00
 $ source your_conda_initalization_script
 $ mamba activate tensorflow_vision
