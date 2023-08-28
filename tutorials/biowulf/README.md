@@ -13,8 +13,8 @@
 Biowulf has many modules already installed but not all dependencies are included in the stock Biowulf modules. For example, openslide and tensorflow are two different modules on Biowulf. Custom python environments provides greater flexibility to manage dependencies. Follow this tutorial to create custom python environments on Biowulf [Conda on Biowulf](https://hpc.nih.gov/docs/diy_installation/conda.html). Biowulf recommends to save conda initalization code into a separate coda init file instead of adding automatic conda initialization into startup files. After conda setup following Biowulf instructions, you will have a conda init file saved in your own Biowulf folder. The conda init file should be sourced in job submission scripts in order to use custom python environment on Biowulf.
 
 ## TensorFlow
-The original TensorFlow installation instructions doesn't work well on Biowulf. Either conda install or pip install will have the *libdevice not found at ./libdevice.10.bc* error.
-The updated TensorFlow installation instructions included fixes for NVCC, XLA, and libdevice file location issues. Applying the steps listed in the *Ubuntu 22.04* section will fix the problem. [Install Tensorflow](https://www.tensorflow.org/install/pip).
+The original TensorFlow installation instruction doesn't work well on Biowulf. Either conda install or pip install will have the *libdevice not found at ./libdevice.10.bc* error.
+The updated TensorFlow installation instruction includes fixes for NVCC, XLA, and libdevice file location issues. Applying the steps listed in the *Ubuntu 22.04* section will fix the problem. [Install Tensorflow](https://www.tensorflow.org/install/pip).
 
 Steps to fix the libdevice issue. Copied from the [Tensorflow documentation](https://www.tensorflow.org/install/pip).
 ```shell
@@ -30,7 +30,7 @@ cp $CONDA_PREFIX/lib/libdevice.10.bc $CONDA_PREFIX/lib/nvvm/libdevice/
 ```
 
 ## PyTorch
-The official PyTorch installation instructions work well on Biowulf. [Install PyTorch](https://pytorch.org/get-started/locally/).
+The official PyTorch installation instruction works well on Biowulf. [Install PyTorch](https://pytorch.org/get-started/locally/).
 
 ## Examples
 
