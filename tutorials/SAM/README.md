@@ -9,6 +9,9 @@ Raw image|SAM|SAM-HQ
 <img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/sam_test.jpg" />|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/results/sam/sam_test_mask.png" />|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/results/sam-hq/sam_test_vit_l_hq_mask.png" /> 
 <img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/sam_test_1.jpg" />|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/results/sam/sam_test_1_mask.png" />|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/results/sam-hq/sam_test_1_vit_l_hq_mask.png" /> 
 
+## TODO
+* Extend the SAM and SAM-HQ test code to beyond the max input image size of 1024x1024.
+
 ## SAM
 [SAM Github repository](https://github.com/facebookresearch/segment-anything)  
 
