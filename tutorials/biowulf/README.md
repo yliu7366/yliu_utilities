@@ -4,7 +4,7 @@
 [Custom Python Enviroment](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#custom-python-environment)  
 [Tensorflow](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#tensorflow)  
 [PyTorch](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#pytorch)  
-[GPU resource]
+[GPU resource](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/biowulf#gpu-resource)  
 [Examples](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#examples)  
   * [Python environment for doing vision tasks with TensorFlow](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#python-environment-for-doing-vision-tasks-using-tensorflow)
   * [Job submission on Biowulf](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/biowulf/README.md#job-submission-on-biowulf)
