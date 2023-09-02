@@ -4,7 +4,7 @@
 * [Results](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/SAM#results)
 * [TODO](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/SAM#todo)
 * [SAM](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/SAM#sam)
-* [SAM-HQ](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/SAM#sam_hq)
+* [SAM-HQ](https://github.com/yliu7366/yliu_utilities/tree/master/tutorials/SAM#sam-hq)
 
   
 ## Results
