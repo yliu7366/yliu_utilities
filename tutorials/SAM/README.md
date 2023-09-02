@@ -1,4 +1,4 @@
-# Experiments on SAM models
+# SAM Experiments
 
 ## Table of Contents
 
