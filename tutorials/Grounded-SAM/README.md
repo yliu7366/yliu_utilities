@@ -36,7 +36,7 @@ The updated demo code works fine.
 python grounded_sam_simple_demo.py
 ```
 #### Grounded-SAM impainting
-This demo sounds very cool but the code for running the demo doesn't work with python import error.
+This demo is particularly interesting but the code for running the demo doesn't work with python import error.
 ```bash
 ImportError: cannot import name 'CLIPTextModelWithProjection' from 'transformers'
 ```
