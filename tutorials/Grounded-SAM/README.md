@@ -14,3 +14,24 @@ The Tag2Text submodule requires rust compiler. Install rust in *Ubuntu 22.04* by
 ```bash
 sudo apt install rustc cargo
 ```
+### Demos
+#### Grounded-SAM-HQ
+This code block for running the Grounded-SAM-HQ demo doesn't work. 
+```bash
+export CUDA_VISIBLE_DEVICES=0
+python grounded_sam_demo.py \
+  --config GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py \
+  --grounded_checkpoint groundingdino_swint_ogc.pth \
+  --sam_hq_checkpoint ./sam_hq_vit_h.pth \  # path to sam-hq checkpoint
+  --use_sam_hq \  # set to use sam-hq model
+  --input_image sam_hq_demo_image.png \
+  --output_dir "outputs" \
+  --box_threshold 0.3 \
+  --text_threshold 0.25 \
+  --text_prompt "chair." \
+  --device "cuda"
+```
+The updated demo code works fine.
+```bash
+python grounded_sam_simple_demo.py
+```
