@@ -14,8 +14,8 @@ The Tag2Text submodule requires rust compiler. Install rust in *Ubuntu 22.04* by
 ```bash
 sudo apt install rustc cargo
 ```
-### Demos
-#### Grounded-SAM-HQ
+## Demos
+### Grounded-SAM-HQ
 This code block for running the Grounded-SAM-HQ demo doesn't work. 
 ```bash
 export CUDA_VISIBLE_DEVICES=0
@@ -35,7 +35,7 @@ The updated demo code works fine.
 ```bash
 python grounded_sam_simple_demo.py
 ```
-#### Grounded-SAM impainting
+### Grounded-SAM impainting
 This demo is particularly interesting but the code for running the demo doesn't work with python import error.
 ```bash
 ImportError: cannot import name 'CLIPTextModelWithProjection' from 'transformers'
