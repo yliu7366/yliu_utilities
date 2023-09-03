@@ -1,4 +1,7 @@
 # Grounded-SAM Experiments
+## Table of Contents
+* [Local Installation](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/README.md#local-installation)
+* [Demos](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/README.md#demos)
 
 ## Local Installation
 Read this section if you need a little bit more clarification about the local installation steps. The Grounding-DINO module requires a local CUDA installation so a default [pytorch and CUDA installation](https://pytorch.org/get-started/locally/) in conda won't work.  
