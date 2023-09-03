@@ -19,7 +19,7 @@ sudo apt install rustc cargo
 ```
 ## Demos
 ### Grounded-SAM-HQ
-This code block for running the Grounded-SAM-HQ demo doesn't work. 
+The command for running the Grounded-SAM-HQ demo doesn't work. 
 ```bash
 export CUDA_VISIBLE_DEVICES=0
 python grounded_sam_demo.py \
@@ -34,9 +34,14 @@ python grounded_sam_demo.py \
   --text_prompt "chair." \
   --device "cuda"
 ```
-The updated demo code works fine.
+Error messages when running the command
 ```bash
-python grounded_sam_simple_demo.py
+usage: Grounded-Segment-Anything Demo [-h] --config CONFIG --grounded_checkpoint GROUNDED_CHECKPOINT [--sam_checkpoint SAM_CHECKPOINT]
+                                      [--sam_hq_checkpoint SAM_HQ_CHECKPOINT] [--use_sam_hq] --input_image INPUT_IMAGE --text_prompt TEXT_PROMPT
+                                      --output_dir OUTPUT_DIR [--box_threshold BOX_THRESHOLD] [--text_threshold TEXT_THRESHOLD] [--device DEVICE]
+Grounded-Segment-Anything Demo: error: the following arguments are required: --input_image, --text_prompt, --output_dir/-o
+--use_sam_hq: command not found
+--input_image: command not found
 ```
 ### Grounded-SAM impainting
 This demo is particularly interesting but the code for running the demo doesn't work with python import error.
