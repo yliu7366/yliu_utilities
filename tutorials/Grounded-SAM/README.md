@@ -7,6 +7,8 @@ Download the CUDA library installation file from [Nvidia](https://developer.nvid
 
 Now export the CUDA_HOME environment variable using the CUDA installation folder and follow the Grounded-SAM local installation steps.
 
+By default, Grounded-SAM is expected to be installed in a 'Grounded-Segment-Anything' folder.  
+
 ### Rust and Cargo
 The Tag2Text submodule requires rust compiler. Install rust in *Ubuntu 22.04* by running the script below.
 ```bash
