@@ -34,7 +34,7 @@ python grounded_sam_demo.py \
   --text_prompt "chair." \
   --device "cuda"
 ```
-Error messages when running the command
+Error messages when running the command:
 ```bash
 usage: Grounded-Segment-Anything Demo [-h] --config CONFIG --grounded_checkpoint GROUNDED_CHECKPOINT [--sam_checkpoint SAM_CHECKPOINT]
                                       [--sam_hq_checkpoint SAM_HQ_CHECKPOINT] [--use_sam_hq] --input_image INPUT_IMAGE --text_prompt TEXT_PROMPT
@@ -44,7 +44,23 @@ Grounded-Segment-Anything Demo: error: the following arguments are required: --i
 --input_image: command not found
 ```
 ### Grounded-SAM impainting
-This demo is particularly interesting but the code for running the demo doesn't work with python import error.
+This demo is particularly interesting but the command running the demo doesn't work.
+```bash
+CUDA_VISIBLE_DEVICES=0
+python grounded_sam_inpainting_demo.py \
+  --config GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py \
+  --grounded_checkpoint groundingdino_swint_ogc.pth \
+  --sam_checkpoint sam_vit_h_4b8939.pth \
+  --input_image assets/inpaint_demo.jpg \
+  --output_dir "outputs" \
+  --box_threshold 0.3 \
+  --text_threshold 0.25 \
+  --det_prompt "bench" \
+  --inpaint_prompt "A sofa, high quality, detailed" \
+  --device "cuda"
+```
+
+Error messages when running the command:
 ```bash
 ImportError: cannot import name 'CLIPTextModelWithProjection' from 'transformers'
 ```
