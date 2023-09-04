@@ -68,7 +68,8 @@ ImportError: cannot import name 'CLIPTextModelWithProjection' from 'transformers
 ### Automatic Labeling 2023-09-04
 |Input Image|RAM|
 ---|---
-<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg">  
+<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/automatic_label_output_he_sam_test.jpg">  
+Again, fine tunning on biological images are required for the pipeline to work.
 
 ### Detect Everything with Text Prompt 2023-09-03
 Using the default *grounded_sam_simple_demo.py* with new input files.  
