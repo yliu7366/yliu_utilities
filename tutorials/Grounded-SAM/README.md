@@ -68,7 +68,7 @@ ImportError: cannot import name 'CLIPTextModelWithProjection' from 'transformers
 ### Automatic Labeling 2023-09-04
 |Input Image|RAM|
 ---|---
-<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/automatic_label_output_he_sam_test.jpg">  
+<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg" width="100px" height="100px">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/automatic_label_output_he_sam_test.jpg" width="100px" height="100px">  
 
 Again, fine tunning on biological images are required for the pipeline to work.
 
