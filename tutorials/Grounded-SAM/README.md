@@ -68,7 +68,7 @@ ImportError: cannot import name 'CLIPTextModelWithProjection' from 'transformers
 ### Automatic Labeling 2023-09-04
 |Input Image|RAM|
 ---|---
-<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg" width="100px" height="100px">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/automatic_label_output_he_sam_test.jpg" width="100px" height="100px">  
+<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg" width="200px" height="200px">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/automatic_label_output_he_sam_test.jpg" width="200px" height="200px">  
 
 Again, fine tunning on biological images are required for the pipeline to work.
 
@@ -76,6 +76,6 @@ Again, fine tunning on biological images are required for the pipeline to work.
 Using the default *grounded_sam_simple_demo.py* with new input files.  
 |Prompt/Class|Input Image|GroundingDINO|Grounded-SAM|
 ---|---|---|---
-blood vessel|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/groundingdino_annotated_image_he_sam_test.jpg">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/grounded_sam_annotated_image_he_sam_test.jpg">
+blood vessel|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg" width="200px" height="200px">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/groundingdino_annotated_image_he_sam_test.jpg" width="200px" height="200px">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/grounded_sam_annotated_image_he_sam_test.jpg" width="200px" height="200px">
 
 Grounded-SAM: input image -> GroundingDINO annotation -> Grounded-SAM annotation
