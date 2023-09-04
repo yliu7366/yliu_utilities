@@ -67,8 +67,8 @@ ImportError: cannot import name 'CLIPTextModelWithProjection' from 'transformers
 ## Grounded-SAM Tests
 ### 2023-09-03
 Using the default *grounded_sam_simple_demo.py* with new input files.  
-|Prompt/Class|Input Image|Results|
----|---|---
-Nuclei|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/grounded_sam_annotated_image_he_sam_test.jpg">
+|Prompt/Class|Input Image|GroundingDINO|SAM|
+---|---|---|---
+Nuclei|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg">|https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/groundingdino_annotated_image_he_sam_test.jpg|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/grounded_sam_annotated_image_he_sam_test.jpg">
 
 The idea is to test the Grounded-SAM's default behavior on biological images. The input *prompt* or *class* is *nuclei* and the goal is to do nuclei segmentation on the input image. Grounded-SAM didn't pickup nuclei but it did a very good job to recognize complex object boundaries so that the portal tract was picked up as whole. It is possible the model has been trained on high magnification images of individual nucleus.
