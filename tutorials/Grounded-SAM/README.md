@@ -69,6 +69,6 @@ ImportError: cannot import name 'CLIPTextModelWithProjection' from 'transformers
 Using the default *grounded_sam_simple_demo.py* with new input files.  
 |Prompt/Class|Input Image|GroundingDINO|SAM|
 ---|---|---|---
-Nuclei|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/groundingdino_annotated_image_he_sam_test.jpg">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/grounded_sam_annotated_image_he_sam_test.jpg">
+blood vessel|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/groundingdino_annotated_image_he_sam_test.jpg">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/grounded_sam_annotated_image_he_sam_test.jpg">
 
 Grounded-SAM pipeline: detection by GroundingDINO -> detection results -> SAM segmentation
