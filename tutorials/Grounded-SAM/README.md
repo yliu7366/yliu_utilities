@@ -66,8 +66,6 @@ ImportError: cannot import name 'CLIPTextModelWithProjection' from 'transformers
 ```
 ## Grounded-SAM Tests
 ### 2023-09-03
-Input image:  
-<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg" width="25%" height="25%">  
-Prompt/Classes: "nuclei"  
-Output:  
-<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/grounded_sam_annotated_image_he_sam_test.jpg" width="25%" height="25%">
+|Prompt/Class|Input Image|Results|
+---|---|---
+Nuclei|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/grounded_sam_annotated_image_he_sam_test.jpg">
