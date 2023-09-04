@@ -65,7 +65,12 @@ Error messages when running the command:
 ImportError: cannot import name 'CLIPTextModelWithProjection' from 'transformers'
 ```
 ## Grounded-SAM Tests
-### 2023-09-03
+### Automatic Labeling 2023-09-04
+|Input Image|RAM|
+---|---
+<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg">  
+
+### Detect Everything with Text Prompt 2023-09-03
 Using the default *grounded_sam_simple_demo.py* with new input files.  
 |Prompt/Class|Input Image|GroundingDINO|Grounded-SAM|
 ---|---|---|---
