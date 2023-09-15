@@ -88,3 +88,4 @@ Replaced the generic large model with BioViL, a BERT-based biomedical relevant v
 * BioViL [manuscript](https://arxiv.org/pdf/2204.09817.pdf)
 * [Understanding BERT architecture](https://medium.com/analytics-vidhya/understanding-bert-architecture-3f35a264b187)
 * [GPT vs. BERT](https://www.makeuseof.com/gpt-vs-bert/)
+* [Create a vocabulary for NLP tasks in Python](https://www.kdnuggets.com/2019/11/create-vocabulary-nlp-tasks-python.html)
