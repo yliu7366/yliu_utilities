@@ -2,6 +2,7 @@
 ## Table of Contents
 * [Local Installation](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/README.md#local-installation)
 * [Demos](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/README.md#demos)
+* [Grounded SAM for Medical Images](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/README.md#grounded-sam-for-medical-images)
 
 ## Local Installation
 Read this section if you need a little bit more clarification about the local installation steps. The Grounding-DINO module requires a local CUDA installation so a default [pytorch and CUDA installation](https://pytorch.org/get-started/locally/) in conda won't work.  
@@ -82,3 +83,7 @@ Grounded-SAM: input image -> GroundingDINO annotation -> Grounded-SAM annotation
 
 ## Grounded-SAM for Medical Images
 [Github repository](https://github.com/rajpurkarlab/Grounded-SAM)
+
+### Background references
+* BioViL uses BERT. [Understanding BERT architecture](https://medium.com/analytics-vidhya/understanding-bert-architecture-3f35a264b187)
+* [GPT vs. BERT](https://www.makeuseof.com/gpt-vs-bert/)
