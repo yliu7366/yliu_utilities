@@ -79,3 +79,6 @@ Using the default *grounded_sam_simple_demo.py* with new input files.
 blood vessel|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg" width="200px" height="200px">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/groundingdino_annotated_image_he_sam_test.jpg" width="200px" height="200px">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/grounded_sam_annotated_image_he_sam_test.jpg" width="200px" height="200px">
 
 Grounded-SAM: input image -> GroundingDINO annotation -> Grounded-SAM annotation
+
+## Grounded-SAM for Medical Images
+[Github repository](https://github.com/rajpurkarlab/Grounded-SAM)
