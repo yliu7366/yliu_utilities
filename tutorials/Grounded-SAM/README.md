@@ -84,7 +84,7 @@ Grounded-SAM: input image -> GroundingDINO annotation -> Grounded-SAM annotation
 ## Grounded-SAM for Medical Images
 Replaced the generic large model with BioViL, a BERT-based biomedical relevant vision-language model. [Github repository](https://github.com/rajpurkarlab/Grounded-SAM)
 
-### Background references
+### References
 * BioViL [manuscript](https://arxiv.org/pdf/2204.09817.pdf)
 * [Understanding BERT architecture](https://medium.com/analytics-vidhya/understanding-bert-architecture-3f35a264b187)
 * [GPT vs. BERT](https://www.makeuseof.com/gpt-vs-bert/)
