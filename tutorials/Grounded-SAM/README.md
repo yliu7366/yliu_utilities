@@ -5,6 +5,8 @@
 * [Grounded SAM for Medical Images](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/README.md#grounded-sam-for-medical-images)
 
 ## Local Installation
+[Grounded-SAM Github repository](https://github.com/IDEA-Research/Grounded-Segment-Anything)
+
 Read this section if you need a little bit more clarification about the local installation steps. The Grounding-DINO module requires a local CUDA installation so a default [pytorch and CUDA installation](https://pytorch.org/get-started/locally/) in conda won't work.  
 
 Download the CUDA library installation file from [Nvidia](https://developer.nvidia.com/cuda-toolkit-archive) and install it to a local folder so it won't mess up system-wide libraries. I choosed to match the download CUDA library version with pytorch CUDA version, which is 11.7 following the official pytorch installation guide as of 09/02/2023.  
