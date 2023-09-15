@@ -82,8 +82,8 @@ blood vessel|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tu
 Grounded-SAM: input image -> GroundingDINO annotation -> Grounded-SAM annotation
 
 ## Grounded-SAM for Medical Images
-[Github repository](https://github.com/rajpurkarlab/Grounded-SAM)
+Replaced the generic large model with BioViL, a BERT-based biomedical relevant large model. [Github repository](https://github.com/rajpurkarlab/Grounded-SAM)
 
 ### Background references
-* BioViL uses BERT. [Understanding BERT architecture](https://medium.com/analytics-vidhya/understanding-bert-architecture-3f35a264b187)
+* [Understanding BERT architecture](https://medium.com/analytics-vidhya/understanding-bert-architecture-3f35a264b187)
 * [GPT vs. BERT](https://www.makeuseof.com/gpt-vs-bert/)
