@@ -69,9 +69,9 @@ ImportError: cannot import name 'CLIPTextModelWithProjection' from 'transformers
 ```
 ## Grounded-SAM Tests
 ### Automatic Labeling 2023-09-04
-|Input Image|RAM|
----|---
-<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg" width="200px" height="200px">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/automatic_label_output_he_sam_test.jpg" width="200px" height="200px">  
+|Input Image|Mask|RAM|
+---|---|---
+<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/data/he_sam_test.jpg" width="200px" height="200px">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/SAM/results/automatic_label_mask_he_sam_test.jpg" width="200px" height="200px">|<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/Grounded-SAM/results/automatic_label_output_he_sam_test.jpg" width="200px" height="200px">  
 
 Again, fine tunning on biological images are required for the pipeline to work.
 
