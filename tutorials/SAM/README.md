@@ -27,3 +27,6 @@ Example [code](https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/
 
 ### Train SAM-HQ locally
 SAM-HQ training script requires python 3.8 as torch.distributed.launch is deprecated in newer python versions. Higher version python such as 3.10 will throw out launcher related errors. Follow the SAM-HQ conda environment [example](https://github.com/SysCV/sam-hq#example-conda-environment-setup) to setup a python 3.8 environment and install scikit-image too.
+
+### SAM-HQ Mask Generator Default Parmaeters
+SAM-HQ uses the SAM's SamAutomaticMaskGenerator and it's default parameters is for a ViT-H backbone. These parameters may not work for ViT-B or other backbones.
