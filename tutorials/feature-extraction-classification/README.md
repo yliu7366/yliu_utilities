@@ -19,9 +19,12 @@ model.summary()
 
 * Use the new model to predict/extract features.
 ```python
+features = []
 batches = [image_data[i:i+BATCH_SIZE] for i in range(0, len(image_data), BATCH_SIZE)]
 for b in batches:
   predicts = model.predict_on_batch( np.array(b) )
+  for pp in predicts:
+    features.append(pp.flatten())
 ```
 
 ## 2. Classification on the extracted features
