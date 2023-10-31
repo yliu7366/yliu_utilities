@@ -27,6 +27,18 @@ for b in batches:
     features.append(pp.flatten())
 ```
 
-## 2. Classification on the extracted features
+## 2. Clustering on the extracted features
+Unsupervised clustering using UMAP and HDBSCAN.
+```python
+features = np.array(features)
+
+standard_embedding = umap.UMAP(random_state=RANDOM_SEED).fit_transform(features)
+
+random.seed(RANDOM_SEED)
+np.random.seed(RANDOM_SEED)
+
+labels = hdbscan.HDBSCAN(min_cluster_size=1000).fit_predict(standard_embedding)
+uu, cc = np.unique(labels, return_counts=True)
+```
 
 ## 3. Visualization
