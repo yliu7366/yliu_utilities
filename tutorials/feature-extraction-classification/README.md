@@ -86,4 +86,4 @@ def createClusterSummary(lbl):
 
   return fig, fig_mpo
 ```
-The code block above create cluster summary images using 20x10 images from each cluster.
+The code block above creates cluster summary images using 20x10 images from each cluster.
