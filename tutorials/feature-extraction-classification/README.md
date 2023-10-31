@@ -26,6 +26,8 @@ for b in batches:
   for pp in predicts:
     features.append(pp.flatten())
 ```
+### 1.2 PyTorch
+
 
 ## 2. Clustering on the extracted features
 Unsupervised clustering using UMAP and HDBSCAN.
