@@ -42,3 +42,45 @@ uu, cc = np.unique(labels, return_counts=True)
 ```
 
 ## 3. Visualization
+Cluster visualization using Matplotlib.
+```python
+plt.scatter(standard_embedding[~clustered, 0],
+            standard_embedding[~clustered, 1],
+            color=(0.5, 0.5, 0.5),
+            s=0.1,
+            alpha=0.5)
+plt.scatter(standard_embedding[clustered, 0],
+            standard_embedding[clustered, 1],
+            c=labels[clustered],
+            s=0.1,
+            cmap='Spectral')
+
+plt.savefig(os.path.join(ROOT, 'clusters', 'clusters.png'))
+```
+
+## 4. Create cluster summary images
+We could use random samples from each cluster to create cluster summary images.
+```python
+def createClusterSummary(lbl):
+  """
+  create a summary image using multiple clustered images
+  :param lbl: cluster label
+  :return: summary image
+  """
+  rows = 10
+  cols = 20
+  fig = np.ndarray((PATCH_SIZE*rows, PATCH_SIZE*cols, 3), dtype=np.uint8)
+  fig_mpo = np.ndarray((PATCH_SIZE*rows, PATCH_SIZE*cols, 3), dtype=np.uint8)
+
+  names = glob.glob(os.path.join(ROOT, 'clusters', str(lbl), '*.png'))
+
+  for y in range(rows):
+    for x in range(cols):
+      index = y*cols + x
+      img = imread(names[index])
+      fig[y * PATCH_SIZE:(y + 1) * PATCH_SIZE, x * PATCH_SIZE:(x + 1) * PATCH_SIZE] = img[:, :PATCH_SIZE]
+      fig_mpo[y * PATCH_SIZE:(y + 1) * PATCH_SIZE, x * PATCH_SIZE:(x + 1) * PATCH_SIZE] = img[:, PATCH_SIZE:]
+
+  return fig, fig_mpo
+```
+The code block above create cluster summary images using 20x10 images from each cluster.
