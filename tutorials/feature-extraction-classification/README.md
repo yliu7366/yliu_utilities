@@ -59,6 +59,7 @@ plt.scatter(standard_embedding[clustered, 0],
 
 plt.savefig(os.path.join(ROOT, 'clusters', 'clusters.png'))
 ```
+<img src="https://github.com/yliu7366/yliu_utilities/blob/master/tutorials/feature-extraction-classification/clusters.png" />
 
 ## 4. Create cluster summary images
 We could use random samples from each cluster to create cluster summary images.
